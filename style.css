@@ -502,6 +502,9 @@ body {
 /* Bagian Teks */
 .content-wrapper {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
 }
 
 .title {
@@ -897,8 +900,13 @@ body {
         gap: 30px;
         margin-top: 30px;
     }
+
      .container {
         flex-direction: column;
+        padding: 2.2rem 1rem;
+    }
+    .content-wrapper .title {
+        font-size: 2rem;
     }
 
     .gallery-wrapper {
@@ -957,6 +965,7 @@ body {
 
     .footer-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .footer-brand p {
@@ -965,6 +974,12 @@ body {
 
     .footer-brand .copyright {
         display: none;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        padding: 3rem 1rem;
     }
 
     .logo {
