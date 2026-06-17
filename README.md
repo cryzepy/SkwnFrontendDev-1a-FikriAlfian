@@ -1,7 +1,5 @@
 # Dekoor - Furniture Landing Page
 
-![Preview](images/living-room-sofa-cushion-minimal-interior-design.jpg)
-
 Live Demo: 👉 **[VIEW LIVE](https://cryzepy.github.io/SkwnFrontendDev-1a-FikriAlfian/)**
 
 ---
