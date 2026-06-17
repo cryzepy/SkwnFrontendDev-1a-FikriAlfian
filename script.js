@@ -176,13 +176,38 @@ $(document).ready(function(){
     // section 4
     $('.subscribe-form').on('submit', function(e) {
         e.preventDefault();
-        
+
         const email = $(this).find('input').val();
-        
+
         $(this).fadeOut(300, function() {
             $(this).html('<p style="color: green; font-weight: bold;">Thank you for joining! Check your inbox.</p>').fadeIn();
         });
-        
+
         console.log("Email terdaftar: " + email);
+    });
+
+    // section 5 - Gallery Accordion Klik
+    $('.gallery-item').click(function() {
+        const $this = $(this);
+
+        // Kalau yang diklik sudah active, tutup semua (kembali ke rata)
+        if ($this.hasClass('active')) {
+            $('.gallery-item').removeClass('active');
+            $('.gallery-wrapper').removeClass('has-active');
+            return;
+        }
+
+        // Hapus active dari semua, lalu aktifkan yang diklik
+        $('.gallery-item').removeClass('active');
+        $this.addClass('active');
+        $('.gallery-wrapper').addClass('has-active');
+    });
+
+    // Tutup accordion kalau klik di luar
+    $(document).click(function(e) {
+        if (!$(e.target).closest('.gallery-wrapper').length) {
+            $('.gallery-item').removeClass('active');
+            $('.gallery-wrapper').removeClass('has-active');
+        }
     });
 });
